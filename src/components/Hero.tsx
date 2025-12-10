@@ -146,7 +146,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-12 right-12 p-4 bg-white rounded-2xl shadow-lg w-52 bouncing">
+            <div className="absolute -bottom-6 md:-bottom-12 right-4 md:right-12 p-3 md:p-4 bg-white rounded-2xl shadow-lg w-48 md:w-52 bouncing z-20">
               <div className="flex items-center justify-between">
                 <div className="flex items-center flex-1">
                   <div className="w-10 h-10 rounded-full bg-petshop-primary flex items-center justify-center flex-shrink-0">
