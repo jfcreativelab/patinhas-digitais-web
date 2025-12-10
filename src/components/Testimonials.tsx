@@ -70,22 +70,22 @@ const Testimonials = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-petshop-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-petshop-secondary/5 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-            <p className="text-petshop-primary font-medium">Depoimentos</p>
-            <div className="h-1 w-10 bg-petshop-primary ml-2"></div>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+            <p className="text-sm sm:text-base text-petshop-primary font-medium">Depoimentos</p>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary ml-2"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark mb-3 sm:mb-4 px-4">
             O que nossos clientes dizem
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
             A satisfação dos nossos clientes e seus pets é nossa maior recompensa
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}
@@ -93,34 +93,34 @@ const Testimonials = () => {
                 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="flex items-start mb-4">
-                  <Quote className="w-8 h-8 text-petshop-primary/30 mr-3 flex-shrink-0" />
-                  <div className="flex-1">
-                    <div className="flex mb-3">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-start mb-3 sm:mb-4">
+                  <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-petshop-primary/30 mr-2 sm:mr-3 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex mb-2 sm:mb-3">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 text-yellow-400 fill-yellow-400"
+                          className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400"
                         />
                       ))}
                     </div>
-                    <p className="text-gray-700 leading-relaxed italic">
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed italic">
                       "{testimonial.text}"
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex items-center pt-4 border-t border-gray-100">
+                <div className="flex items-center pt-3 sm:pt-4 border-t border-gray-100">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
                     loading="lazy"
-                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-petshop-primary/20"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4 border-2 border-petshop-primary/20 flex-shrink-0"
                   />
-                  <div>
-                    <h4 className="font-bold text-petshop-dark">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.pet}</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-sm sm:text-base text-petshop-dark">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-gray-600 truncate">{testimonial.pet}</p>
                   </div>
                 </div>
               </CardContent>

@@ -34,14 +34,14 @@ const Footer = () => {
       {/* Decorative gradient */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-petshop-primary via-petshop-secondary to-petshop-tertiary"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div>
-            <div className="flex items-center mb-6">
-              <PawPrint className="h-8 w-8 text-petshop-primary mr-2" />
-              <span className="text-2xl font-bold">MELHOR AMIGO</span>
+            <div className="flex items-center mb-4 sm:mb-6">
+              <PawPrint className="h-6 w-6 sm:h-8 sm:w-8 text-petshop-primary mr-2" />
+              <span className="text-xl sm:text-2xl font-bold">MELHOR AMIGO</span>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6 leading-relaxed">
               Cuidando do seu melhor amigo com carinho e dedicação para uma vida mais feliz e saudável.
             </p>
             <div className="flex space-x-3">
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Links Rápidos</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -133,7 +133,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Serviços</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Serviços</h3>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -184,8 +184,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-            <p className="text-gray-400 mb-4 text-sm">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Newsletter</h3>
+            <p className="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm">
               Receba ofertas exclusivas e dicas de cuidado com seu pet
             </p>
             {subscribed ? (

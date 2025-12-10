@@ -52,16 +52,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden bg-gradient-to-b from-petshop-light to-white">
-      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
-        <div className={`md:w-1/2 transition-all duration-1000 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-32 opacity-0'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold text-petshop-dark mb-4 leading-tight">
+    <section id="home" className="min-h-screen pt-16 sm:pt-20 flex items-center relative overflow-hidden bg-gradient-to-b from-petshop-light to-white">
+      <div className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 flex flex-col md:flex-row items-center">
+        <div className={`w-full md:w-1/2 transition-all duration-1000 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-32 opacity-0'}`}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-petshop-dark mb-3 sm:mb-4 leading-tight">
             Cuidado e carinho para seu <span className="text-petshop-primary">melhor amigo</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8">
             Oferecemos os melhores serviços e produtos para garantir a saúde e felicidade do seu pet.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button 
               onClick={(e) => {
                 e.preventDefault();
@@ -73,7 +73,7 @@ const Hero = () => {
                   window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }
               }}
-              className="bg-petshop-primary hover:bg-petshop-primary/90 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 font-semibold"
+              className="bg-petshop-primary hover:bg-petshop-primary/90 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 font-semibold w-full sm:w-auto"
             >
               Nossos Serviços
             </Button>
@@ -89,18 +89,18 @@ const Hero = () => {
                 }
               }}
               variant="outline" 
-              className="border-2 border-petshop-primary text-petshop-primary hover:bg-petshop-primary hover:text-white rounded-full px-8 py-6 text-lg transition-all transform hover:scale-105 font-semibold"
+              className="border-2 border-petshop-primary text-petshop-primary hover:bg-petshop-primary hover:text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-all transform hover:scale-105 font-semibold w-full sm:w-auto"
             >
               Agendar Visita
             </Button>
           </div>
           
-          <div className="flex items-center mt-12 animate-fade-in-up">
-            <div className="flex -space-x-4">
+          <div className="flex items-center mt-8 sm:mt-12 animate-fade-in-up">
+            <div className="flex -space-x-3 sm:-space-x-4">
               {[1, 2, 3, 4].map((i) => (
                 <div 
                   key={i} 
-                  className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-md hover:scale-110 transition-transform cursor-pointer"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-md hover:scale-110 transition-transform cursor-pointer"
                   style={{ zIndex: 5 - i }}
                 >
                   <img 
@@ -112,53 +112,53 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="ml-4">
+            <div className="ml-2 sm:ml-4">
               <div className="flex items-center mb-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
+                  <svg key={star} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
-              <p className="text-sm text-gray-600 font-medium">Mais de 500 avaliações positivas</p>
+              <p className="text-xs sm:text-sm text-gray-600 font-medium">Mais de 500 avaliações positivas</p>
             </div>
           </div>
         </div>
         
-        <div className={`md:w-1/2 mt-12 md:mt-0 transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-32 opacity-0'}`}>
+        <div className={`w-full md:w-1/2 mt-8 sm:mt-12 md:mt-0 transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-32 opacity-0'}`}>
           <div className="relative">
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-petshop-secondary rounded-full opacity-30 floating"></div>
-            <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-petshop-primary rounded-full opacity-30 bouncing"></div>
+            <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-24 h-24 sm:w-32 sm:h-32 bg-petshop-secondary rounded-full opacity-30 floating"></div>
+            <div className="absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 w-16 h-16 sm:w-24 sm:h-24 bg-petshop-primary rounded-full opacity-30 bouncing"></div>
             
-            <div className="relative z-10 bg-white rounded-3xl shadow-xl overflow-hidden group">
+            <div className="relative z-10 bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden group">
               <img 
                 src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt="Cachorro feliz" 
                 loading="eager"
-                className="w-full h-auto object-cover rounded-3xl transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl transition-transform duration-700 group-hover:scale-105"
               />
               
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
                 <div className="flex items-center">
-                  <PawPrint className="h-6 w-6 text-white mr-2" />
-                  <h3 className="text-white text-xl font-semibold">Tosa e banho com carinho</h3>
+                  <PawPrint className="h-5 w-5 sm:h-6 sm:w-6 text-white mr-2" />
+                  <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">Tosa e banho com carinho</h3>
                 </div>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 md:-bottom-12 right-4 md:right-12 p-3 md:p-4 bg-white rounded-2xl shadow-lg w-48 md:w-52 bouncing z-20">
+            <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-12 right-2 sm:right-4 md:right-12 p-2 sm:p-3 md:p-4 bg-white rounded-xl sm:rounded-2xl shadow-lg w-40 sm:w-48 md:w-52 bouncing z-20">
               <div className="flex items-center justify-between">
-                <div className="flex items-center flex-1">
-                  <div className="w-10 h-10 rounded-full bg-petshop-primary flex items-center justify-center flex-shrink-0">
-                    <PawPrint className="h-5 w-5 text-white" />
+                <div className="flex items-center flex-1 min-w-0">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-petshop-primary flex items-center justify-center flex-shrink-0">
+                    <PawPrint className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
-                  <div className="ml-3 min-w-0">
-                    <p className="text-xs text-gray-500 leading-tight">Pet feliz</p>
-                    <p className="text-sm font-bold text-petshop-dark leading-tight">+2.500</p>
+                  <div className="ml-2 sm:ml-3 min-w-0">
+                    <p className="text-[10px] sm:text-xs text-gray-500 leading-tight truncate">Pet feliz</p>
+                    <p className="text-xs sm:text-sm font-bold text-petshop-dark leading-tight">+2.500</p>
                   </div>
                 </div>
-                <div className="bg-petshop-primary/10 rounded-full p-2 ml-2 flex-shrink-0">
-                  <svg className="w-4 h-4 text-petshop-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-petshop-primary/10 rounded-full p-1.5 sm:p-2 ml-1 sm:ml-2 flex-shrink-0">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-petshop-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                   </svg>
                 </div>

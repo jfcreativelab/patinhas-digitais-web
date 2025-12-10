@@ -79,14 +79,14 @@ const Navbar = () => {
         scrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center">
         <a 
           href="#home" 
           onClick={(e) => handleSmoothScroll(e, 'home')}
           className="flex items-center cursor-pointer group"
         >
-          <PawPrint className="h-8 w-8 text-petshop-primary mr-2 transition-transform group-hover:rotate-12" />
-          <span className="text-2xl font-bold text-petshop-dark group-hover:text-petshop-primary transition-colors">MELHOR AMIGO</span>
+          <PawPrint className="h-6 w-6 sm:h-8 sm:w-8 text-petshop-primary mr-1 sm:mr-2 transition-transform group-hover:rotate-12" />
+          <span className="text-lg sm:text-xl md:text-2xl font-bold text-petshop-dark group-hover:text-petshop-primary transition-colors">MELHOR AMIGO</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-6">
@@ -186,12 +186,29 @@ const Navbar = () => {
           </Button>
         </div>
         
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-petshop-dark p-2 rounded-lg hover:bg-petshop-light transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+        <div className="flex items-center gap-2 md:hidden">
+          {location.pathname !== '/cart' && location.pathname !== '/checkout' && (
+            <Button
+              onClick={() => navigate('/cart')}
+              variant="ghost"
+              size="sm"
+              className="relative rounded-full p-2 hover:bg-petshop-primary/10"
+              aria-label="Carrinho"
+            >
+              <ShoppingCart className="w-5 h-5 text-petshop-dark" />
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-petshop-primary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {getTotalItems() > 9 ? '9+' : getTotalItems()}
+                </span>
+              )}
+            </Button>
+          )}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-petshop-dark p-2 rounded-lg hover:bg-petshop-light transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
             {mobileMenuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -199,12 +216,13 @@ const Navbar = () => {
             )}
           </svg>
         </button>
+        </div>
       </div>
       
       {/* Mobile menu com animação */}
       <div 
-        className={`md:hidden bg-white shadow-xl absolute w-full transition-all duration-300 ease-in-out overflow-hidden ${
-          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden bg-white shadow-xl absolute w-full left-0 right-0 transition-all duration-300 ease-in-out overflow-hidden ${
+          mobileMenuOpen ? 'max-h-[500px] opacity-100 top-full' : 'max-h-0 opacity-0 top-full'
         }`}
       >
         <div className="flex flex-col px-4 pt-4 pb-6 space-y-2">

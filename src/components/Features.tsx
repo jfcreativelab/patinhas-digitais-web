@@ -57,22 +57,22 @@ const Features = () => {
   
   return (
     <section ref={sectionRef} className="py-20 bg-white relative">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-12">
+          <div className="w-full md:w-1/2">
             <div className="flex items-center mb-4">
-              <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-              <p className="text-petshop-primary font-medium">Por que nos escolher?</p>
+              <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+              <p className="text-sm sm:text-base text-petshop-primary font-medium">Por que nos escolher?</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark mb-4 sm:mb-6">
               Diferencial no cuidado com o seu pet
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
               Na MELHOR AMIGO, nosso compromisso é proporcionar o melhor atendimento para seu animal de estimação. 
               Combinamos carinho, experiência e instalações modernas para garantir a felicidade do seu pet.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {features.map((feature, index) => (
                 <div 
                   key={feature.id} 
@@ -80,51 +80,51 @@ const Features = () => {
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 rounded-full bg-petshop-tertiary/20 flex items-center justify-center mr-4 text-2xl">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-petshop-tertiary/20 flex items-center justify-center mr-3 sm:mr-4 text-xl sm:text-2xl flex-shrink-0">
                       {feature.icon}
                     </div>
-                    <h3 className="font-bold text-lg text-petshop-dark">{feature.title}</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-petshop-dark">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600 pl-16">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 pl-0 sm:pl-14 md:pl-16">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className={`md:w-1/2 transition-all duration-1000 ${isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className={`w-full md:w-1/2 transition-all duration-1000 ${isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <div className="relative">
-              <div className="absolute -top-8 -left-8 w-48 h-48 rounded-full bg-petshop-primary/10 z-0"></div>
-              <div className="absolute -bottom-8 -right-8 w-48 h-48 rounded-full bg-petshop-secondary/10 z-0"></div>
+              <div className="absolute -top-4 -left-4 sm:-top-8 sm:-left-8 w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-petshop-primary/10 z-0"></div>
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-8 sm:-right-8 w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-petshop-secondary/10 z-0"></div>
               
               <img 
                 src="https://img.freepik.com/fotos-premium/grande-grupo-de-caes-olhando-para-a-camera-sobre-fundo-azul_191971-28627.jpg" 
                 alt="Pet feliz" 
                 loading="lazy"
-                className="rounded-3xl relative z-10 shadow-xl transition-transform duration-500 hover:scale-105"
+                className="rounded-2xl sm:rounded-3xl relative z-10 shadow-xl transition-transform duration-500 hover:scale-105 w-full"
               />
               
-              <div className="absolute -bottom-5 left-10 bg-white rounded-xl shadow-lg p-4 z-20 floating">
+              <div className="absolute -bottom-3 left-4 sm:-bottom-5 sm:left-10 bg-white rounded-lg sm:rounded-xl shadow-lg p-2 sm:p-3 md:p-4 z-20 floating">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-petshop-primary/20 flex items-center justify-center">
-                    <PawPrint className="h-5 w-5 text-petshop-primary" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-petshop-primary/20 flex items-center justify-center flex-shrink-0">
+                    <PawPrint className="h-4 w-4 sm:h-5 sm:w-5 text-petshop-primary" />
                   </div>
-                  <div className="ml-3">
-                    <p className="font-bold text-petshop-dark">10+ Anos</p>
-                    <p className="text-xs text-gray-500">de experiência</p>
+                  <div className="ml-2 sm:ml-3">
+                    <p className="font-bold text-sm sm:text-base text-petshop-dark">10+ Anos</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500">de experiência</p>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -top-5 right-10 bg-white rounded-xl shadow-lg p-4 z-20 bouncing">
+              <div className="absolute -top-3 right-4 sm:-top-5 sm:right-10 bg-white rounded-lg sm:rounded-xl shadow-lg p-2 sm:p-3 md:p-4 z-20 bouncing">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-petshop-secondary/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-petshop-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-petshop-secondary/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-petshop-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905a3.61 3.61 0 01-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                     </svg>
                   </div>
-                  <div className="ml-3">
-                    <p className="font-bold text-petshop-dark">98%</p>
-                    <p className="text-xs text-gray-500">satisfação</p>
+                  <div className="ml-2 sm:ml-3">
+                    <p className="font-bold text-sm sm:text-base text-petshop-dark">98%</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500">satisfação</p>
                   </div>
                 </div>
               </div>

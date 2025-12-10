@@ -92,22 +92,22 @@ const Services = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-            <p className="text-petshop-primary font-medium">Nossos Serviços</p>
-            <div className="h-1 w-10 bg-petshop-primary ml-2"></div>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+            <p className="text-sm sm:text-base text-petshop-primary font-medium">Nossos Serviços</p>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary ml-2"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark px-4">
             Cuidados Completos para seu Pet
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
             Oferecemos uma variedade de serviços para garantir a saúde, beleza e bem-estar do seu melhor amigo, sempre com muito carinho e atenção.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <Card 
               key={index}
@@ -120,22 +120,22 @@ const Services = () => {
                 transitionDuration: '500ms'
               }}
             >
-              <CardContent className="p-6 relative">
+              <CardContent className="p-4 sm:p-6 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-petshop-primary/5 to-petshop-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
-                  <div className="flex items-start mb-4">
-                    <div className="flex-shrink-0 mr-4">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-petshop-light to-petshop-primary/10 flex items-center justify-center group-hover:from-petshop-primary/20 group-hover:to-petshop-secondary/20 transition-all duration-500 text-3xl transform group-hover:scale-110 group-hover:rotate-3">
+                  <div className="flex items-start mb-3 sm:mb-4">
+                    <div className="flex-shrink-0 mr-3 sm:mr-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-petshop-light to-petshop-primary/10 flex items-center justify-center group-hover:from-petshop-primary/20 group-hover:to-petshop-secondary/20 transition-all duration-500 text-2xl sm:text-3xl transform group-hover:scale-110 group-hover:rotate-3">
                         {service.icon}
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-petshop-dark mb-2 group-hover:text-petshop-primary transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl font-bold text-petshop-dark mb-2 group-hover:text-petshop-primary transition-colors">
                         {service.title}
                       </h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
                   <div 
                     className="flex justify-between items-center pt-4 border-t border-gray-100 group-hover:border-petshop-primary/30 transition-colors"
                   >

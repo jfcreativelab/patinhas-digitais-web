@@ -133,45 +133,45 @@ const Products = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-            <p className="text-petshop-primary font-medium">Nossos Produtos</p>
-            <div className="h-1 w-10 bg-petshop-primary ml-2"></div>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+            <p className="text-sm sm:text-base text-petshop-primary font-medium">Nossos Produtos</p>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary ml-2"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark px-4">
             Produtos de Qualidade para seu Pet
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
             Encontre os melhores produtos para seu animal de estimação, selecionados com carinho pela equipe MELHOR AMIGO.
           </p>
         </div>
 
         <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-          <div className="flex justify-center mb-10">
-            <TabsList className="bg-petshop-light/70 border border-gray-200 p-1 rounded-full">
+          <div className="flex justify-center mb-8 sm:mb-10 overflow-x-auto pb-2">
+            <TabsList className="bg-petshop-light/70 border border-gray-200 p-1 rounded-full inline-flex">
               <TabsTrigger 
                 value="all" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Todos
               </TabsTrigger>
               <TabsTrigger 
                 value="dogs" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Cachorros
               </TabsTrigger>
               <TabsTrigger 
                 value="cats" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Gatos
               </TabsTrigger>
               <TabsTrigger 
                 value="accessories" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Acessórios
               </TabsTrigger>
@@ -179,7 +179,7 @@ const Products = () => {
           </div>
 
           <TabsContent value={selectedCategory} className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {filteredProducts.map((product, index) => (
                 <Card 
                   key={product.id}
@@ -187,7 +187,7 @@ const Products = () => {
                     ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                   style={{ transitionDelay: `${index * 100}ms`, transitionDuration: '500ms' }}
                 >
-                  <div className="h-56 overflow-hidden relative group/image rounded-t-lg">
+                  <div className="h-48 sm:h-56 overflow-hidden relative group/image rounded-t-lg">
                     <img 
                       src={product.image} 
                       alt={product.name}
@@ -198,23 +198,23 @@ const Products = () => {
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute top-3 right-3 bg-petshop-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl transform group-hover:scale-110 transition-all duration-300 z-10">
+                    <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-petshop-primary text-white px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl transform group-hover:scale-110 transition-all duration-300 z-10">
                       {product.price}
                     </div>
-                    <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-semibold text-petshop-dark shadow-lg">
+                    <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="bg-white/95 backdrop-blur-sm px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full text-[10px] sm:text-xs font-semibold text-petshop-dark shadow-lg">
                         Ver detalhes
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-petshop-dark mb-2 group-hover:text-petshop-primary transition-colors">
+                  <CardContent className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-petshop-dark mb-2 group-hover:text-petshop-primary transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
+                    <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">{product.description}</p>
                     <Button 
                       onClick={() => handleAddToCart(product)}
-                      className="w-full bg-petshop-secondary hover:bg-petshop-secondary/90 text-white rounded-full py-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] font-semibold"
+                      className="w-full bg-petshop-secondary hover:bg-petshop-secondary/90 text-white rounded-full py-4 sm:py-5 md:py-6 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] font-semibold"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 mr-2">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />

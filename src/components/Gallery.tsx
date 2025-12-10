@@ -122,45 +122,45 @@ const Gallery = () => {
         </svg>
       </div>
       
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-            <p className="text-petshop-primary font-medium">Nossa Galeria</p>
-            <div className="h-1 w-10 bg-petshop-primary ml-2"></div>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+            <p className="text-sm sm:text-base text-petshop-primary font-medium">Nossa Galeria</p>
+            <div className="h-1 w-6 sm:w-10 bg-petshop-primary ml-2"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark px-4">
             Momentos Especiais com Pets
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
             Confira fotos adoráveis dos nossos clientes peludos e dos cuidados que oferecemos a eles.
           </p>
         </div>
         
         <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-          <div className="flex justify-center mb-10">
-            <TabsList className="bg-petshop-light/70 border border-gray-200 p-1 rounded-full">
+          <div className="flex justify-center mb-8 sm:mb-10 overflow-x-auto pb-2">
+            <TabsList className="bg-petshop-light/70 border border-gray-200 p-1 rounded-full inline-flex">
               <TabsTrigger 
                 value="all" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Todos
               </TabsTrigger>
               <TabsTrigger 
                 value="dogs" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Cachorros
               </TabsTrigger>
               <TabsTrigger 
                 value="cats" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Gatos
               </TabsTrigger>
               <TabsTrigger 
                 value="services" 
-                className="rounded-full px-6 py-2 data-[state=active]:bg-petshop-primary data-[state=active]:text-white"
+                className="rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 text-xs sm:text-sm data-[state=active]:bg-petshop-primary data-[state=active]:text-white whitespace-nowrap"
               >
                 Serviços
               </TabsTrigger>
@@ -168,7 +168,7 @@ const Gallery = () => {
           </div>
 
           <TabsContent value={selectedCategory} className="mt-0">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {filteredImages.map((image, index) => (
                 <div 
                   key={image.id}
@@ -182,7 +182,7 @@ const Gallery = () => {
                       src={image.url} 
                       alt={image.alt}
                       loading="lazy"
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+                      className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <h3 className="text-white font-medium text-lg">{image.alt}</h3>

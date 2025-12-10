@@ -78,59 +78,59 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
           <div>
             <div className="flex items-center mb-4">
-              <div className="h-1 w-10 bg-petshop-primary mr-2"></div>
-              <p className="text-petshop-primary font-medium">Entre em Contato</p>
+              <div className="h-1 w-6 sm:w-10 bg-petshop-primary mr-2"></div>
+              <p className="text-sm sm:text-base text-petshop-primary font-medium">Entre em Contato</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-petshop-dark mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-petshop-dark mb-4 sm:mb-6">
               Estamos aqui para ajudar
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
               Tem alguma dúvida ou gostaria de agendar um serviço? Entre em contato conosco e teremos prazer em atendê-lo.
             </p>
             
-            <div className="space-y-6">
-              <div className="flex items-start group hover:bg-petshop-light/50 p-4 rounded-lg transition-colors">
-                <div className="w-12 h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-4 text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all">
-                  <MapPin className="w-6 h-6" />
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-start group hover:bg-petshop-light/50 p-3 sm:p-4 rounded-lg transition-colors">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-3 sm:mr-4 text-lg sm:text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-petshop-dark mb-1">Localização</h3>
-                  <p className="text-gray-600">Av. dos Pets, 123 - Centro<br/>São Paulo, SP</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start group hover:bg-petshop-light/50 p-4 rounded-lg transition-colors">
-                <div className="w-12 h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-4 text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-petshop-dark mb-1">Telefone</h3>
-                  <p className="text-gray-600">(11) 99999-9999</p>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-base sm:text-lg text-petshop-dark mb-1">Localização</h3>
+                  <p className="text-sm sm:text-base text-gray-600">Av. dos Pets, 123 - Centro<br/>São Paulo, SP</p>
                 </div>
               </div>
               
-              <div className="flex items-start group hover:bg-petshop-light/50 p-4 rounded-lg transition-colors">
-                <div className="w-12 h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-4 text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all">
-                  <Mail className="w-6 h-6" />
+              <div className="flex items-start group hover:bg-petshop-light/50 p-3 sm:p-4 rounded-lg transition-colors">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-3 sm:mr-4 text-lg sm:text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all flex-shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-petshop-dark mb-1">Email</h3>
-                  <p className="text-gray-600">contato@melhoramigo.com.br</p>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-base sm:text-lg text-petshop-dark mb-1">Telefone</h3>
+                  <p className="text-sm sm:text-base text-gray-600">(11) 99999-9999</p>
                 </div>
               </div>
               
-              <div className="flex items-start group hover:bg-petshop-light/50 p-4 rounded-lg transition-colors">
-                <div className="w-12 h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-4 text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all">
-                  <Clock className="w-6 h-6" />
+              <div className="flex items-start group hover:bg-petshop-light/50 p-3 sm:p-4 rounded-lg transition-colors">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-3 sm:mr-4 text-lg sm:text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-petshop-dark mb-1">Horário</h3>
-                  <p className="text-gray-600">
+                <div className="min-w-0">
+                  <h3 className="font-bold text-base sm:text-lg text-petshop-dark mb-1">Email</h3>
+                  <p className="text-sm sm:text-base text-gray-600 break-all">contato@melhoramigo.com.br</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start group hover:bg-petshop-light/50 p-3 sm:p-4 rounded-lg transition-colors">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-petshop-primary/10 flex items-center justify-center mr-3 sm:mr-4 text-lg sm:text-xl text-petshop-primary group-hover:bg-petshop-primary group-hover:text-white transition-all flex-shrink-0">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-base sm:text-lg text-petshop-dark mb-1">Horário</h3>
+                  <p className="text-sm sm:text-base text-gray-600">
                     Segunda - Sexta: 8:00 - 19:00<br/>
                     Sábado: 9:00 - 17:00
                   </p>
@@ -139,9 +139,9 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
-            <h3 className="text-2xl font-bold text-petshop-dark mb-2">Envie uma mensagem</h3>
-            <p className="text-gray-600 mb-6">Preencha o formulário e entraremos em contato em breve</p>
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-5 sm:p-6 md:p-8 hover:shadow-2xl transition-shadow">
+            <h3 className="text-xl sm:text-2xl font-bold text-petshop-dark mb-2">Envie uma mensagem</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Preencha o formulário e entraremos em contato em breve</p>
             
             {submitted ? (
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -150,9 +150,9 @@ const Contact = () => {
                 <p className="text-green-700">Agradecemos seu contato. Nossa equipe responderá em até 24 horas.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Nome Completo <span className="text-red-500">*</span>
                   </label>
                   <Input
@@ -163,19 +163,19 @@ const Contact = () => {
                       setName(e.target.value);
                       if (errors.name) setErrors({ ...errors, name: '' });
                     }}
-                    className={`w-full transition-all ${errors.name ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
+                    className={`w-full text-sm sm:text-base transition-all ${errors.name ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
                     placeholder="Seu nome completo"
                   />
                   {errors.name && (
-                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {errors.name}
                     </p>
                   )}
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <Input
@@ -186,19 +186,19 @@ const Contact = () => {
                       setEmail(e.target.value);
                       if (errors.email) setErrors({ ...errors, email: '' });
                     }}
-                    className={`w-full transition-all ${errors.email ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
+                    className={`w-full text-sm sm:text-base transition-all ${errors.email ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
                     placeholder="seu@email.com"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {errors.email}
                     </p>
                   )}
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Telefone <span className="text-red-500">*</span>
                   </label>
                   <Input
@@ -209,19 +209,19 @@ const Contact = () => {
                       setPhone(e.target.value);
                       if (errors.phone) setErrors({ ...errors, phone: '' });
                     }}
-                    className={`w-full transition-all ${errors.phone ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
+                    className={`w-full text-sm sm:text-base transition-all ${errors.phone ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
                     placeholder="(11) 99999-9999"
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {errors.phone}
                     </p>
                   )}
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Mensagem <span className="text-red-500">*</span>
                   </label>
                   <Textarea
@@ -231,12 +231,12 @@ const Contact = () => {
                       setMessage(e.target.value);
                       if (errors.message) setErrors({ ...errors, message: '' });
                     }}
-                    className={`w-full min-h-[120px] transition-all ${errors.message ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
+                    className={`w-full min-h-[100px] sm:min-h-[120px] text-sm sm:text-base transition-all ${errors.message ? 'border-red-500 focus:border-red-500' : 'border-gray-300'}`}
                     placeholder="Como podemos ajudar? Conte-nos mais sobre sua necessidade..."
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {errors.message}
                     </p>
                   )}
@@ -246,7 +246,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-petshop-primary hover:bg-petshop-primary/90 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-petshop-primary hover:bg-petshop-primary/90 text-white py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
