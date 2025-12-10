@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <script>
+      // Redirecionar para a página principal do SPA
+      const path = window.location.pathname;
+      const basePath = '/patinhas-digitais-web';
+      const redirectPath = path.startsWith(basePath) 
+        ? basePath + '/index.html' 
+        : '/index.html';
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
+

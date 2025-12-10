@@ -28,18 +28,23 @@ const AppRoutes = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <CartProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <AppRoutes />
-        </BrowserRouter>
-      </TooltipProvider>
-    </CartProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Detectar o basePath baseado no ambiente
+  const basename = import.meta.env.PROD ? '/patinhas-digitais-web' : '';
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <CartProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter basename={basename}>
+            <AppRoutes />
+          </BrowserRouter>
+        </TooltipProvider>
+      </CartProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
